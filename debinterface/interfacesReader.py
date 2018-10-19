@@ -135,7 +135,7 @@ class InterfacesReader(object):
                     self._adapters[self._context].appendPostDown(cmd)
             else:
                 # store as if so as not to loose it
-                self._adapters[self._context].setUnknown(sline[0], sline[1])
+                self._adapters[self._context].setUnknown(sline[0], ' '.join(sline[1:]))
 
     def _read_auto(self, line):
         """ Identify which adapters are flagged auto. """
